@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Pro Gym</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            background: #111;
+            color: #fff;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #f04;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #f04;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #d03;
+        }
+
+        /* About */
+        .about,
+        .services,
+        .contact {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .about h2,
+        .services h2,
+        .contact h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* Services */
+        .service-boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .service {
+            background: #f4f4f4;
+            margin: 15px;
+            padding: 25px;
+            border-radius: 10px;
+            width: 280px;
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            background: #ddd;
+            transform: translateY(-5px);
+        }
+
+        .service h3 {
+            margin-bottom: 15px;
+            color: #f04;
+        }
+
+        /* Contact */
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact input,
+        .contact textarea {
+            margin: 10px 0;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            padding: 12px;
+            background: #f04;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .contact button:hover {
+            background: #d03;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .service-boxes {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Fitness Pro Gym</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <h1>Transform Your Body & Mind</h1>
+        <p>Join Fitness Pro Gym and start your fitness journey today.</p>
+        <a href="#services" class="btn">Get Started</a>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>Fitness Pro Gym is dedicated to helping you achieve your health and fitness goals. With modern equipment,
+            experienced trainers, and a supportive community, we make fitness enjoyable and effective.</p>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-boxes">
+            <div class="service">
+                <h3>Personal Training</h3>
+                <p>Work one-on-one with certified trainers who create customized plans tailored for your fitness
+                    journey.</p>
+            </div>
+            <div class="service">
+                <h3>Group Classes</h3>
+                <p>From yoga to HIIT, join our group classes and stay motivated with others on the same path.</p>
+            </div>
+            <div class="service">
+                <h3>Nutrition Guidance</h3>
+                <p>Get expert advice on nutrition and diet plans to complement your workout routines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Fitness Pro Gym. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
